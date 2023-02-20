@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "198547986390",
+    "project_id": "ostadauction",
+    "storage_bucket": "ostadauction.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198547986390:android:ea07fb1d1492d14da9b677",
+        "android_client_info": {
+          "package_name": "com.example.auction"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "198547986390-tlha0mufah5d79qmqitfcubh13d71ben.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMNpUkA3L0hbdNVu4mCZgUIY40dolX8I4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "198547986390-tlha0mufah5d79qmqitfcubh13d71ben.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
