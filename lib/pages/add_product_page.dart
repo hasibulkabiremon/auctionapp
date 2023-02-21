@@ -133,20 +133,7 @@ class _AddProductPageState extends State<AddProductPage> {
                 },
               ),
             ),
-            // Padding(
-            //   padding: const EdgeInsets.symmetric(vertical: 4.0),
-            //   child: TextFormField(
-            //     maxLines: 2,
-            //     controller: _shortDescriptionController,
-            //     decoration: const InputDecoration(
-            //       filled: true,
-            //       labelText: 'Enter Short Description(optional)',
-            //     ),
-            //     validator: (value) {
-            //       return null;
-            //     },
-            //   ),
-            // ),
+
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 4.0),
               child: TextFormField(
@@ -181,66 +168,7 @@ class _AddProductPageState extends State<AddProductPage> {
                 },
               ),
             ),
-            // Padding(
-            //   padding: const EdgeInsets.symmetric(vertical: 4.0),
-            //   child: TextFormField(
-            //     keyboardType: TextInputType.number,
-            //     controller: _salePriceController,
-            //     decoration: const InputDecoration(
-            //       filled: true,
-            //       labelText: 'Enter Sale Price',
-            //     ),
-            //     validator: (value) {
-            //       if (value == null || value.isEmpty) {
-            //         return 'This field must not be empty';
-            //       }
-            //       if (num.parse(value) <= 0) {
-            //         return 'Price should be greater than 0';
-            //       }
-            //       return null;
-            //     },
-            //   ),
-            // ),
-            // Padding(
-            //   padding: const EdgeInsets.symmetric(vertical: 4.0),
-            //   child: TextFormField(
-            //     keyboardType: TextInputType.number,
-            //     controller: _quantityController,
-            //     decoration: const InputDecoration(
-            //       filled: true,
-            //       labelText: 'Enter Quantity',
-            //     ),
-            //     validator: (value) {
-            //       if (value == null || value.isEmpty) {
-            //         return 'This field must not be empty';
-            //       }
-            //       if (num.parse(value) <= 0) {
-            //         return 'Quantity should be greater than 0';
-            //       }
-            //       return null;
-            //     },
-            //   ),
-            // ),
-            // Padding(
-            //   padding: const EdgeInsets.symmetric(vertical: 4.0),
-            //   child: TextFormField(
-            //     keyboardType: TextInputType.number,
-            //     controller: _discountController,
-            //     decoration: const InputDecoration(
-            //       filled: true,
-            //       labelText: 'Enter Discount',
-            //     ),
-            //     validator: (value) {
-            //       if (value == null || value.isEmpty) {
-            //         return 'This field must not be empty';
-            //       }
-            //       if (num.parse(value) < 0) {
-            //         return 'Discount should not be a negative value';
-            //       }
-            //       return null;
-            //     },
-            //   ),
-            // ),
+
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(8),

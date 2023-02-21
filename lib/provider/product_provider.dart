@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:auction/model/bidmode.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import '../db/dhhelper.dart';
@@ -7,6 +8,7 @@ import '../model/product_model.dart';
 class ProductProvider extends ChangeNotifier {
   List<ProductModel> productList = [];
   List<ProductModel> productListbyuser = [];
+  List<BidModel> bidList = [];
 
 
   getAllProducts() {
@@ -25,6 +27,15 @@ class ProductProvider extends ChangeNotifier {
     });
   }
 
+  getAllBid(String productId){
+    DbHelper.getAllBid(productId).listen((snapshot) {
+      bidList = List.generate(snapshot.docs.length, (index) =>
+      BidModel.fromMap(snapshot.docs[index].data())
+      );
+      notifyListeners();
+    });
+  }
+
 
   Future<String> uploadImage(String thumbnailImageLocalPath) async {
     final photoRef = FirebaseStorage.instance
@@ -37,6 +48,10 @@ class ProductProvider extends ChangeNotifier {
 
   Future<void> addNewProduct(ProductModel productModel) {
     return DbHelper.addNewProduct(productModel);
+  }
+
+  Future<void> addNewBid(BidModel bidModel){
+    return DbHelper.addNewBid(bidModel);
   }
 
   Future<void> deleteImage(String downloadUrl) {
