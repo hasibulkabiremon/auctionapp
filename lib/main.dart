@@ -1,6 +1,9 @@
+import 'package:auction/pages/add_product_page.dart';
 import 'package:auction/pages/launcherpage.dart';
 import 'package:auction/pages/loginpage.dart';
+import 'package:auction/pages/product_details.dart';
 import 'package:auction/pages/viewproduct.dart';
+import 'package:auction/provider/product_provider.dart';
 import 'package:auction/provider/userprovider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +14,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(MultiProvider(providers: [
-    ChangeNotifierProvider(create: (_) => UserProvider(),)
+    ChangeNotifierProvider(create: (_) => UserProvider(),),
+    ChangeNotifierProvider(create: (_) => ProductProvider(),),
   ],
   child: const MyApp()));
 }
@@ -43,6 +47,8 @@ class MyApp extends StatelessWidget {
         LauncherPage.routeName: (_) => LauncherPage(),
         LoginPage.routeName: (_) => LoginPage(),
         ViewProductPage.routeName: (_) => ViewProductPage(),
+        AddProductPage.routeName: (_) => AddProductPage(),
+        ProductDetailsPage.routeName: (_) => ProductDetailsPage(),
       },
     );
   }

@@ -44,6 +44,12 @@ dependencies:
   firebase_storage:
   firebase_messaging:
   firebase_analytics:
+  connectivity_plus:
+  image_picker:
+  flutter_cache_manager:
+  intl:
+  cached_network_image:
+
 
 
 dev_dependencies:
