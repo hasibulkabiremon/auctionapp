@@ -30,12 +30,24 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Auction'),),
-      body: Center(
-        child: TextButton.icon(
-          onPressed: signInWithGoogle,
-          icon: Icon(Icons.g_mobiledata),
-          label: Text('Sign in with Google'),
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text('AUCTION',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 50,color: Colors.brown),),
+          ),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.all(80.0),
+              child: TextButton.icon(
+                onPressed: signInWithGoogle,
+                icon: Icon(Icons.g_mobiledata,size: 100,),
+                label: Text('Sign in with Google'),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

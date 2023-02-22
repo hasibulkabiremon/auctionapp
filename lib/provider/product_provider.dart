@@ -9,6 +9,7 @@ class ProductProvider extends ChangeNotifier {
   List<ProductModel> productList = [];
   List<ProductModel> productListbyuser = [];
   List<BidModel> bidList = [];
+  BidModel winner = BidModel();
 
 
   getAllProducts() {
@@ -56,6 +57,18 @@ class ProductProvider extends ChangeNotifier {
 
   Future<void> deleteImage(String downloadUrl) {
     return FirebaseStorage.instance.refFromURL(downloadUrl).delete();
+  }
+
+  Future<void> bidWinner()async {
+    int bidamount = 0;
+    if(bidList.isNotEmpty){
+      for( BidModel bid in bidList){
+        if(int.parse(bid.bid!)>bidamount){
+          winner = bid;
+        }
+      }
+    }
+    notifyListeners();
   }
 
 }

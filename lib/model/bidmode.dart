@@ -6,15 +6,15 @@ const String collectionFieldBid = 'bid';
 
 class BidModel {
   String? bidId;
-  String userId;
-  String productId;
-  String bid;
+  String? userId;
+  String? productId;
+  String? bid;
 
   BidModel({
     this.bidId,
-    required this.userId,
-    required this.productId,
-    required this.bid,
+    this.userId,
+    this.productId,
+    this.bid,
   });
 
   Map<String, dynamic> toMap() {

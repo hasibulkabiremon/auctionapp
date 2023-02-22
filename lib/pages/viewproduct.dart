@@ -19,6 +19,7 @@ class ViewProductPage extends StatelessWidget {
     return Scaffold(
       drawer: const MainDrawer(),
       appBar: AppBar(
+        title: const Text('Auction Product'),
         actions: [
           IconButton(onPressed: (){
             AuthService.logout();
@@ -47,7 +48,8 @@ class ViewProductPage extends StatelessWidget {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ListTile(
-                        onTap: () => Navigator.pushReplacementNamed(
+                        tileColor: Colors.grey,
+                        onTap: () => Navigator.pushNamed(
                             context,
                             ProductDetailsPage.routeName,
                             arguments: product),
