@@ -14,3 +14,12 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+The auction app generally build to sell and by from
+Online with a limited time bitting.
+
+If you want to sell then it will make your product 
+Available for bidding by other.
+
+You may buy your product with a real bid online.
+
